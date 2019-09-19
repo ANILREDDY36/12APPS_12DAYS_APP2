@@ -40,19 +40,19 @@
 
     <div id="main_content">
       <div id="header">
-        <% if current_page?(root_path) %>
+        <%# if current_page?(root_path) %>
           <p>All Posts</p>
-        <% elsif current_page?(about_path) %>
+        <%# elsif current_page?(about_path) %>
           <p>About</p>
-        <% else %>
+        <%# else %>
           <%= link_to "Back to All Posts", root_path %>
-        <% end %>
+        <%# end %>
 
         <%# if user_signed_in? %>
-          <!-- <div class="buttons">
-            <button class="button"><%#= link_to "New Post", new_post_path %></button>
+          <div class="buttons">
+            <button class="button"><%= link_to "New Post", new_post_path %></button>
             <button class="button">Log Out</button>
-          </div> -->
+          </div>
         <%# end %>
       </div>
 
