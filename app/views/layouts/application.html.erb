@@ -15,7 +15,7 @@
     <div id="sidebar">
       <div id="logo">
         <%= link_to root_path do %>
-          <div align="center"><%= image_tag "download (2).jpeg", class: "logo_image" %></div>
+          <div align="center"><%= image_tag "background6.jpeg", class: "logo_image" %></div>
         <% end %>
       </div>
 
@@ -35,7 +35,7 @@
 
       <% if !user_signed_in? %>
         <p class="sign_in"><%= link_to "Admin Login", new_user_session_path %></p>
-      <%end %>
+      <% end %>
     </div>
 
     <div id="main_content">
@@ -51,7 +51,7 @@
         <% if user_signed_in? %>
           <div class="buttons">
             <button class="button"><%= link_to "New Post", new_post_path %></button>
-            <button class="button">Log Out</button>
+            <button><%= link_to 'Logout', destroy_user_session_path, method: :delete %></button>
           </div>
         <% end %>
       </div>
